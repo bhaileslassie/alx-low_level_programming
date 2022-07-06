@@ -6,7 +6,7 @@
  * for loop breaks before passing 24:00
  * Return: 24 hour clock line by line
  */
-void print_24_hours (void)
+void print_24_hours(void)
 {
 	int h, m;
 
