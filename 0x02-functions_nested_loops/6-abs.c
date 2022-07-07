@@ -1,10 +1,16 @@
-#include "_putchar.h"
+#include <stdlib.h>
+#include "main.h"
+
 /**
- * _abs - calculates the absolute value of an integer
- * @ab: integer input
- * Return: absolute value of ab
+ *_abs - Check _abs(int)
+ * @r: An integre input
+ * Return: Absolut value of number r
  */
-int _abs(int ab)
+int _abs(int r)
 {
-	return (ab * ((ab > 0) - (ab < 0)));
+	if (r >= 0)
+		return (r);
+	else
+		return (r * -1);
 }
+
