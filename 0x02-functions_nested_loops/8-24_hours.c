@@ -1,25 +1,26 @@
-#include "_putchar.h"
-/**
- *  - function that prints every minute of the day, 24 hour clock
- * h = hour, m = minutes
- * / 10 allows second digit to rotate
- * for loop breaks before passing 24:00
- * Return: 24 hour clock line by line
- */
-void print_24_hours(void)
-{
-	int h, m;
+#include <unistd.h>
+#include "main.h"
 
-	for (h = 0; h < 24; h++)
+/**
+ * jack_bauer - Check the description
+ * Description: Function that prints every minute of
+ * the day of Jack Bauer
+ * Return: Nothing.
+ */
+void jack_bauer(void)
+{
+	int hours, minutes;
+
+	for (hours = 0; hours < 24; hours++)
 	{
-		for (m = 0; m < 60; m++)
+		for (minutes = 0; minutes < 60; minutes++)
 		{
-			_putchar((h / 10) + '0');
-			_putchar((h % 10) + '0');
+			_putchar((hours / 10) + '0');
+			_putchar((hours % 10) + '0');
 			_putchar(':');
-			_putchar((m / 10) + '0');
-			_putchar((m % 10) + '0');
+			_putchar((minutes / 10) + '0');
+			_putchar((minutes % 10) + '0');
 			_putchar('\n');
 		}
 	}
-}
+}}
