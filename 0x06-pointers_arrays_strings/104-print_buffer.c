@@ -38,7 +38,6 @@ void print_line(char *c, int s, int l)
  * @size: size of buffer
  *
  * Return: void
- * Return: Always 0.
  */
 void print_buffer(char *b, int size)
 {
