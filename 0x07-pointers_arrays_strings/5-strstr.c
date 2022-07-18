@@ -1,32 +1,48 @@
-#include "main.h"
-
 /**
- * _strstr - locates a substring
- * @haystack: string in which to check for needle
- * @needle: substring to find in haystack
+ * _strstr - finds matching set of bytes of one substring in another string
+ * @haystack: input pointer to string of characters to check
  *
- * Return: pointer to beginning of needle in haystack or NULL if no match
+ * @needle: input pointer to substring of characters to look for
+ *
+ * Return: pointer to location of substring or null if substring not found
  */
+
 char *_strstr(char *haystack, char *needle)
 {
-  unsigned int i = 0, j = 0;
+	int i = 0;
+	int j = 0;
+	int size = 0;
+	int x = 0;
 
-  while (haystack[i])
-  {
-    while (needle[j] && (haystack[i] == needle[0]))
-    {
-      if (haystack[i + j] == needle[j])
-        j++;
-      else
-        break;
-    }
-    if (needle[j])
-    {
-      i++;
-      j = 0;
-    }
-    else
-      return (haystack + i);
-  }
-  return (0);
+	for (j = 0; needle[j] != '\0'; j++)
+	{
+		size++;
+	}
+	if (size == 0)
+	{
+		return (haystack);
+	}
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		if (haystack[i] == needle[0])
+		{
+			x = 0;
+			while (x < size && haystack[i + x] == needle[x])
+			{
+				if (x == (size - 1))
+				{
+					return (&haystack[i]);
+				}
+				x++;
+			}
+		}
+	}
+	if (haystack[i] == '\0' && needle[x] == '\0')
+	{
+		return (&haystack[i]);
+	}
+	else
+	{
+		return ('\0');
+	}
 }
