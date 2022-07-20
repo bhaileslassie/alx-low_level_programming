@@ -3,7 +3,6 @@ int strlen_no_wilds(char *str);
 void iterate_wild(char **wildstr);
 char *postfix_match(char *str, char *postfix);
 int wildcmp(char *s1, char *s2);
-
 /**
  * strlen_no_wilds - Returns the length of a string,
  * ignoring wildcard characters.
@@ -22,10 +21,8 @@ int strlen_no_wilds(char *str)
         index++;
         len += strlen_no_wilds(str + index);
     }
-
     return (len);
 }
-
 /**
  * iterate_wild - Iterates through a string located at a wildcard
  * until it points to a non-wildcard character.
@@ -39,7 +36,6 @@ void iterate_wild(char **wildstr)
         iterate_wild(wildstr);
     }
 }
-
 /**
  * postfix_match - Checks if a string str matches the postfix of
  * another string potentially containing wildcards.
@@ -62,10 +58,8 @@ char *postfix_match(char *str, char *postfix)
         postfix++;
         return (postfix_match(str, postfix));
     }
-
     return (postfix);
 }
-
 /**
  * wildcmp - Compares two strings, considering wildcard characters.
  * @s1: The first string to be compared.
