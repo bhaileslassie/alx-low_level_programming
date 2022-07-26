@@ -10,11 +10,11 @@
  */
 char *argstostr(int ac, char **av)
 {
-    int i;
-    int j;
-    char *p = NULL;
-    int k;
-    int ext;
+	int i;
+	int j;
+	char *p = NULL;
+	int k;
+	int ext;
 
     k = 0;
     ext = 0;
